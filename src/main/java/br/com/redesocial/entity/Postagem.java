@@ -7,11 +7,12 @@ import javax.persistence.*;
 @Data
 @Entity
 public class Postagem {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_postagem;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idPostagem;
 
-    @Column( nullable = false)
-    private int id_usuario;
+    @Column( nullable = false, name = "id_usuario")
+    private int idUsuario;
 
     @Column( nullable = false)
     private String titulo;

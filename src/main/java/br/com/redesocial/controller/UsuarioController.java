@@ -35,7 +35,6 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity addUsuario(@RequestBody Usuario usuario) {
         try{
-            usuario.setLogado(false);
             return new ResponseEntity(usuarioRepository.save(usuario), HttpStatus.CREATED);
         }catch(Exception e){
            return new ResponseEntity("Não foi possivel cadastrar o usuário", HttpStatus.BAD_REQUEST);
